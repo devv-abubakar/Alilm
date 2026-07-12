@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Al-Ilm Science Academy</title>
+<meta name="description" content="Al-Ilm Science Academy — a premier science institute in Begum Pura, Lahore, Pakistan. Established 2012." />
+
+<!-- Google Fonts: Poppins (display) + Inter (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ Decorative Islamic-star / knowledge-network SVG sprite (used via <use>) ============ -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="icon-star" viewBox="0 0 100 100">
+      <path d="M50 2 L61 39 L98 39 L68 61 L79 98 L50 75 L21 98 L32 61 L2 39 L39 39 Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============================= HEADER / NAVIGATION ============================= -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#home" class="brand" data-nav="home" aria-label="Al-Ilm Science Academy — Home">
+  <span class="brand-mark" aria-hidden="true">
+    <!-- src="icon.png" ki jagah apne image ka actual naam likhein agar wo change hai -->
+    <img src="alilm.png" alt="Al-Ilm Logo" style="width: 100%; height: 100%; object-fit: contain; filter: none;">
+  </span>
+  <span class="brand-text">
+    <strong>Al-Ilm</strong> Science Academy
+  </span>
+</a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a href="#home" data-nav="home" class="nav-link is-active">Home</a></li>
+        <li><a href="#about" data-nav="about" class="nav-link">About</a></li>
+        <li><a href="#programs" data-nav="programs" class="nav-link">Programs</a></li>
+        <li><a href="#why-us" data-nav="why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#admissions" data-nav="admissions" class="nav-link">Admissions</a></li>
+        <li><a href="#contact" data-nav="contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#admissions" data-nav="admissions" class="btn btn-primary btn-small nav-link">Apply Now</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile slide-down menu -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <ul>
+      <li><a href="#home" data-nav="home" class="nav-link">Home</a></li>
+      <li><a href="#about" data-nav="about" class="nav-link">About</a></li>
+      <li><a href="#programs" data-nav="programs" class="nav-link">Programs</a></li>
+      <li><a href="#why-us" data-nav="why-us" class="nav-link">Why Us</a></li>
+      <li><a href="#admissions" data-nav="admissions" class="nav-link">Admissions</a></li>
+      <li><a href="#contact" data-nav="contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ============================= APP VIEWPORT (sliding sections live here) ============================= -->
+<main class="app-viewport" id="appViewport">
+  <div class="sections-track" id="sectionsTrack">
+
+    <!-- ============ HOME ============ -->
+    <section class="page-section is-active" id="home" data-section="home">
+      <div class="section-scroll">
+
+        <div class="hero">
+          <div class="hero-bg" aria-hidden="true">
+            <svg class="hero-network" viewBox="0 0 800 600" fill="none">
+              <g class="net-lines" stroke-width="1">
+                <line x1="120" y1="120" x2="320" y2="80"/>
+                <line x1="320" y1="80" x2="520" y2="160"/>
+                <line x1="520" y1="160" x2="700" y2="90"/>
+                <line x1="120" y1="120" x2="260" y2="300"/>
+                <line x1="260" y1="300" x2="480" y2="260"/>
+                <line x1="480" y1="260" x2="520" y2="160"/>
+                <line x1="260" y1="300" x2="180" y2="470"/>
+                <line x1="480" y1="260" x2="600" y2="420"/>
+                <line x1="600" y1="420" x2="700" y2="90" opacity=".4"/>
+                <line x1="180" y1="470" x2="380" y2="540"/>
+                <line x1="380" y1="540" x2="600" y2="420"/>
+              </g>
+              <g class="net-nodes">
+                <circle cx="120" cy="120" r="5"/>
+                <circle cx="320" cy="80" r="4"/>
+                <circle cx="520" cy="160" r="6"/>
+                <circle cx="700" cy="90" r="4"/>
+                <circle cx="260" cy="300" r="5"/>
+                <circle cx="480" cy="260" r="4"/>
+                <circle cx="180" cy="470" r="4"/>
+                <circle cx="600" cy="420" r="6"/>
+                <circle cx="380" cy="540" r="4"/>
+              </g>
+              <use href="#icon-star" x="560" y="40" width="90" height="90" class="net-star net-star--1"/>
+              <use href="#icon-star" x="60" y="360" width="70" height="70" class="net-star net-star--2"/>
+            </svg>
+          </div>
+
+          <div class="hero-content">
+            <p class="eyebrow reveal">Begum Pura, Lahore &middot; Est. 6 September 2012</p>
+            <h1 class="reveal">Where <span class="text-accent">Ilm</span> meets discipline, and curiosity becomes capability.</h1>
+            <p class="hero-lead reveal">Al-Ilm Science Academy has spent over a decade building strong foundations in Science, Mathematics and Computer Studies for students in Lahore — grounded in rigor, guided by character.</p>
+            <div class="hero-cta reveal">
+              <a href="#admissions" data-nav="admissions" class="btn btn-primary nav-link">Begin Admissions</a>
+              <a href="#programs" data-nav="programs" class="btn btn-ghost nav-link">Explore Programs</a>
+            </div>
+
+            <dl class="hero-stats reveal">
+              <div><dt>2012</dt><dd>Founded</dd></div>
+              <div><dt>13+</dt><dd>Years of Teaching</dd></div>
+              <div><dt>Lahore</dt><dd>Begum Pura Campus</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Quick strip -->
+        <div class="belt reveal">
+          <p>Registered Science Academy &nbsp;•&nbsp; Matric &amp; O/A-Level Science &nbsp;•&nbsp; Pre-Medical &amp; Pre-Engineering &nbsp;•&nbsp; Computer Studies</p>
+        </div>
+
+        <!-- ============ FACTS BAND ============ -->
+        <div class="container">
+          <div class="facts-band">
+            <div class="fact reveal">
+              <span class="fact-num">2012</span>
+              <span class="fact-label">Founded in Begum Pura</span>
+            </div>
+            <div class="fact reveal">
+              <span class="fact-num">6</span>
+              <span class="fact-label">Teaching Days a Week</span>
+            </div>
+            <div class="fact reveal">
+              <span class="fact-num">5</span>
+              <span class="fact-label">Core Science Tracks</span>
+            </div>
+            <div class="fact reveal">
+              <span class="fact-num">1</span>
+              <span class="fact-label">Campus, One Community</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ HOME: PROGRAMS PREVIEW ============ -->
+        <div class="home-block">
+          <div class="container">
+            <div class="block-header reveal">
+              <div>
+                <p class="eyebrow">What We Teach</p>
+                <h2>Programs built around the student, not the syllabus alone</h2>
+              </div>
+              <a href="#programs" data-nav="programs" class="link-more nav-link">View all programs →</a>
+            </div>
+
+            <div class="card-grid card-grid--preview">
+              <article class="prog-card reveal">
+                <div class="prog-icon" aria-hidden="true">🧪</div>
+                <h3>Matric Science (IX–X)</h3>
+                <p>Physics, Chemistry, Biology and Mathematics on the Punjab Board syllabus, reinforced with weekly concept tests.</p>
+              </article>
+              <article class="prog-card reveal">
+                <div class="prog-icon" aria-hidden="true">🩺</div>
+                <h3>Pre-Medical (XI–XII)</h3>
+                <p>Biology, Chemistry and Physics taught with entry-test preparation in view, not just the board exam.</p>
+              </article>
+              <article class="prog-card reveal">
+                <div class="prog-icon" aria-hidden="true">📐</div>
+                <h3>Pre-Engineering (XI–XII)</h3>
+                <p>Mathematics and Physics with heavy problem-solving practice for engineering entry tests.</p>
+              </article>
+              <article class="prog-card reveal">
+                <div class="prog-icon" aria-hidden="true">💻</div>
+                <h3>Computer Studies</h3>
+                <p>Foundational computer science and hands-on computing skills for Matric and Intermediate students.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ HOME: WHY US PREVIEW ============ -->
+        <div class="home-block home-block--tint">
+          <div class="container">
+            <div class="block-header reveal">
+              <div>
+                <p class="eyebrow">The Al-Ilm Difference</p>
+                <h2>Why families in Begum Pura keep choosing us</h2>
+              </div>
+              <a href="#why-us" data-nav="why-us" class="link-more nav-link">See the full approach →</a>
+            </div>
+
+            <div class="feature-grid feature-grid--preview">
+              <div class="feature reveal">
+                <span class="feature-mark">01</span>
+                <h3>Concept before content</h3>
+                <p>Every topic is taught to be understood first and memorised second — so it survives past the exam.</p>
+              </div>
+              <div class="feature reveal">
+                <span class="feature-mark">02</span>
+                <h3>Small, focused batches</h3>
+                <p>Class sizes are kept small so every student is actually seen, questioned, and corrected.</p>
+              </div>
+              <div class="feature reveal">
+                <span class="feature-mark">03</span>
+                <h3>Honest progress reports</h3>
+                <p>Parents receive clear, regular updates on test performance — no surprises at year end.</p>
+              </div>
+              <div class="feature reveal">
+                <span class="feature-mark">04</span>
+                <h3>Rooted in the community</h3>
+                <p>Based in Begum Pura since 2012 — we know our students and their families, not just their roll numbers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ HOME: CAMPUS & FACILITIES ============ -->
+        <!-- Sample section — replace descriptions/photos with your actual campus facilities before publishing. -->
+        <div class="home-block">
+          <div class="container">
+            <div class="block-header reveal">
+              <div>
+                <p class="eyebrow">Campus</p>
+                <h2>A calm, disciplined space built for study</h2>
+              </div>
+            </div>
+
+            <div class="facility-grid">
+              <div class="facility-card reveal">
+                <div class="facility-icon" aria-hidden="true">🔬</div>
+                <h3>Science Demonstration Area</h3>
+                <p>Core Physics, Chemistry and Biology concepts are reinforced with practical demonstrations, not diagrams alone.</p>
+              </div>
+              <div class="facility-card reveal">
+                <div class="facility-icon" aria-hidden="true">📚</div>
+                <h3>Study &amp; Reading Hall</h3>
+                <p>A quiet, supervised space for students to revise between classes and before tests.</p>
+              </div>
+              <div class="facility-card reveal">
+                <div class="facility-icon" aria-hidden="true">🖥️</div>
+                <h3>Computer Lab</h3>
+                <p>Dedicated systems for Computer Studies practicals and basic digital literacy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ HOME: TESTIMONIALS ============ -->
+        <!-- Sample testimonials — swap in real parent/student feedback before publishing. -->
+        <div class="home-block home-block--tint">
+          <div class="container">
+            <div class="block-header reveal">
+              <div>
+                <p class="eyebrow">In Their Words</p>
+                <h2>What parents and students say</h2>
+              </div>
+            </div>
+
+            <div class="testimonial-grid">
+              <figure class="testimonial-card reveal">
+                <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>My son's Chemistry concepts finally made sense here. The teachers actually check whether he understood, not just whether he showed up.</blockquote>
+                <figcaption>Parent, Matric Batch</figcaption>
+              </figure>
+              <figure class="testimonial-card reveal">
+                <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>Small batches meant I could actually ask questions without hesitating. That made the biggest difference for my Pre-Medical year.</blockquote>
+                <figcaption>Student, Pre-Medical</figcaption>
+              </figure>
+              <figure class="testimonial-card reveal">
+                <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>We get a clear report after every test — no guessing how our daughter is really doing until the final result.</blockquote>
+                <figcaption>Parent, Intermediate Batch</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ HOME: FAQ TEASER ============ -->
+        <div class="home-block">
+          <div class="container">
+            <div class="block-header reveal">
+              <div>
+                <p class="eyebrow">Common Questions</p>
+                <h2>Before you reach out</h2>
+              </div>
+              <a href="#admissions" data-nav="admissions" class="link-more nav-link">See all admissions FAQs →</a>
+            </div>
+
+            <div class="faq-list faq-list--preview">
+              <div class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  Do you admit students mid-session?
+                  <span class="faq-toggle" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes. Admissions stay open through the year, subject to seats being available in the relevant batch.</p>
+                </div>
+              </div>
+              <div class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  Do you teach both Punjab Board and Cambridge students?
+                  <span class="faq-toggle" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes — we run separate tracks for Matric/Intermediate (Punjab Board) and O/A-Level (Cambridge) students.</p>
+                </div>
+              </div>
+              <div class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  How is student progress shared with parents?
+                  <span class="faq-toggle" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Through weekly and monthly test results, shared directly with parents rather than left for report card day.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ HOME: FINAL CTA ============ -->
+        <div class="cta-banner reveal">
+          <div class="container cta-banner-inner">
+            <div>
+              <h2>Ready to see if Al-Ilm is the right fit?</h2>
+              <p>Visit the Begum Pura campus, or call us during office hours — no obligation, just a conversation about your child's next step.</p>
+            </div>
+            <div class="cta-banner-actions">
+              <a href="#admissions" data-nav="admissions" class="btn btn-primary nav-link">Begin Admissions</a>
+              <a href="#contact" data-nav="contact" class="btn btn-ghost btn-ghost--dark nav-link">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="page-section" id="about" data-section="about">
+      <div class="section-scroll">
+        <div class="container">
+          <p class="eyebrow reveal">About the Academy</p>
+          <h2 class="reveal">Thirteen years of building scientific minds in Begum Pura</h2>
+
+          <div class="about-grid">
+            <div class="about-copy reveal">
+              <p>Founded on <strong>6 September 2012</strong>, Al-Ilm Science Academy began as a small neighbourhood classroom in Begum Pura, Lahore, with a simple conviction: that rigorous science education, delivered with patience and integrity, changes the trajectory of a student's life.</p>
+              <p>In the early years, that meant one teacher, one blackboard, and a handful of Matric students who needed Physics and Chemistry to make sense before an exam could. What worked was never the size of the room — it was the refusal to move on until a concept actually landed.</p>
+              <p>Over the years the Academy has grown into a trusted institute for Matriculation and Intermediate science students, and for families across Lahore who want more than rote learning — they want understanding that lasts. The subjects expanded — Biology, Computer Studies, Cambridge O &amp; A-Level support — but the method did not change.</p>
+              <p>Our name, <em>Al-Ilm</em>, means "the knowledge." It is both our identity and our standard.</p>
+            </div>
+
+            <div class="about-cards">
+              <div class="mini-card reveal">
+                <h3>Our Mission</h3>
+                <p>To make high-quality science and mathematics education accessible, disciplined, and genuinely understood — not memorised.</p>
+              </div>
+              <div class="mini-card reveal">
+                <h3>Our Vision</h3>
+                <p>To be Lahore's most trusted name in science coaching, producing students who think critically and act with integrity.</p>
+              </div>
+              <div class="mini-card reveal">
+                <h3>Our Values</h3>
+                <p>Discipline, clarity of concept, respect for the student, and honest reporting of progress to every parent.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ ABOUT: HISTORY TIMELINE ============ -->
+          <div class="about-timeline">
+            <p class="eyebrow reveal">Our Journey</p>
+            <h2 class="reveal">From one classroom to a full science campus</h2>
+
+            <ol class="timeline timeline--history">
+              <li class="timeline-step reveal">
+                <span class="timeline-index">2012</span>
+                <div>
+                  <h3>The Academy is founded</h3>
+                  <p>Al-Ilm Science Academy opens its doors in Begum Pura, Lahore, on 6 September 2012, teaching Matric-level Science.</p>
+                </div>
+              </li>
+              <li class="timeline-step reveal">
+                <span class="timeline-index">Growth</span>
+                <div>
+                  <h3>Programs expand</h3>
+                  <p>Pre-Medical, Pre-Engineering and Computer Studies are added as more families in Begum Pura ask for Intermediate-level coaching.</p>
+                </div>
+              </li>
+              <li class="timeline-step reveal">
+                <span class="timeline-index">Cambridge Track</span>
+                <div>
+                  <h3>O &amp; A-Level support begins</h3>
+                  <p>Dedicated Cambridge-syllabus classes are introduced for O and A-Level Physics, Chemistry and Biology students.</p>
+                </div>
+              </li>
+              <li class="timeline-step reveal">
+                <span class="timeline-index">Today</span>
+                <div>
+                  <h3>A full science campus</h3>
+                  <p>Al-Ilm now runs structured batches across five core tracks, six days a week, from a single dedicated campus in Begum Pura.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- ============ ABOUT: FACILITIES ============ -->
+          <!-- Sample section — replace with your actual campus facilities/photos before publishing. -->
+          <div class="about-facilities">
+            <p class="eyebrow reveal">On Campus</p>
+            <h2 class="reveal">What the Begum Pura campus offers</h2>
+
+            <div class="facility-grid">
+              <div class="facility-card reveal">
+                <div class="facility-icon" aria-hidden="true">🔬</div>
+                <h3>Science Demonstration Area</h3>
+                <p>Core concepts across Physics, Chemistry and Biology are reinforced through demonstration, not diagrams alone.</p>
+              </div>
+              <div class="facility-card reveal">
+                <div class="facility-icon" aria-hidden="true">📚</div>
+                <h3>Study &amp; Reading Hall</h3>
+                <p>A quiet, supervised space where students can revise between classes and ahead of tests.</p>
+              </div>
+              <div class="facility-card reveal">
+                <div class="facility-icon" aria-hidden="true">🖥️</div>
+                <h3>Computer Lab</h3>
+                <p>Dedicated systems for Computer Studies practicals and everyday digital literacy.</p>
+              </div>
+              <div class="facility-card reveal">
+                <div class="facility-icon" aria-hidden="true">🗂️</div>
+                <h3>Test &amp; Result Records</h3>
+                <p>Every student's weekly and monthly test history is kept on file and shared with parents on request.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ ABOUT: LEADERSHIP MESSAGE ============ -->
+          <div class="admin-message reveal">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <p>We have never measured a good year by how many students passed. We measure it by how many actually understood what they were taught — because that is what stays with them after the exam is over.</p>
+            <span class="admin-message-by">— Al-Ilm Science Academy, Administration</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROGRAMS ============ -->
+    <section class="page-section" id="programs" data-section="programs">
+      <div class="section-scroll">
+        <div class="container">
+          <p class="eyebrow reveal">Academic Programs</p>
+          <h2 class="reveal">Focused tracks for every stage of a science student's journey</h2>
+          <p class="section-lead reveal">Each track is taught in small groups, with concept-first teaching and regular assessment — so progress is visible, not assumed.</p>
+
+          <div class="card-grid card-grid--detailed">
+            <article class="prog-card prog-card--detailed reveal">
+              <div class="prog-icon" aria-hidden="true">🧪</div>
+              <h3>Matric Science (IX–X)</h3>
+              <p>Physics, Chemistry, Biology and Mathematics built on the Punjab Board curriculum, with weekly concept tests.</p>
+              <ul class="prog-meta">
+                <li><strong>Level:</strong> Class IX &amp; X</li>
+                <li><strong>Subjects:</strong> Physics, Chemistry, Biology, Maths</li>
+                <li><strong>Batches:</strong> Morning &amp; evening</li>
+                <li><strong>Assessment:</strong> Weekly concept tests</li>
+              </ul>
+            </article>
+            <article class="prog-card prog-card--detailed reveal">
+              <div class="prog-icon" aria-hidden="true">🩺</div>
+              <h3>Pre-Medical (XI–XII)</h3>
+              <p>Biology, Chemistry and Physics taught with entry-test preparation in view, not just the board exam.</p>
+              <ul class="prog-meta">
+                <li><strong>Level:</strong> Intermediate, Part I &amp; II</li>
+                <li><strong>Subjects:</strong> Biology, Chemistry, Physics</li>
+                <li><strong>Batches:</strong> Morning &amp; evening</li>
+                <li><strong>Assessment:</strong> Weekly + entry-test pattern papers</li>
+              </ul>
+            </article>
+            <article class="prog-card prog-card--detailed reveal">
+              <div class="prog-icon" aria-hidden="true">📐</div>
+              <h3>Pre-Engineering (XI–XII)</h3>
+              <p>Mathematics and Physics with heavy problem-solving practice for engineering entry tests.</p>
+              <ul class="prog-meta">
+                <li><strong>Level:</strong> Intermediate, Part I &amp; II</li>
+                <li><strong>Subjects:</strong> Mathematics, Physics, Chemistry</li>
+                <li><strong>Batches:</strong> Morning &amp; evening</li>
+                <li><strong>Assessment:</strong> Weekly + entry-test pattern papers</li>
+              </ul>
+            </article>
+            <article class="prog-card prog-card--detailed reveal">
+              <div class="prog-icon" aria-hidden="true">💻</div>
+              <h3>Computer Studies</h3>
+              <p>Foundational computer science and practical computing skills for Matric and Intermediate students.</p>
+              <ul class="prog-meta">
+                <li><strong>Level:</strong> Matric &amp; Intermediate</li>
+                <li><strong>Focus:</strong> Theory + hands-on lab practice</li>
+                <li><strong>Batches:</strong> Evening</li>
+                <li><strong>Assessment:</strong> Monthly practicals</li>
+              </ul>
+            </article>
+            <article class="prog-card prog-card--detailed reveal">
+              <div class="prog-icon" aria-hidden="true">✍️</div>
+              <h3>O &amp; A-Level Science</h3>
+              <p>Cambridge-aligned Physics, Chemistry and Biology support for O and A-Level students.</p>
+              <ul class="prog-meta">
+                <li><strong>Level:</strong> O-Level &amp; A-Level</li>
+                <li><strong>Subjects:</strong> Physics, Chemistry, Biology</li>
+                <li><strong>Batches:</strong> Evening</li>
+                <li><strong>Assessment:</strong> Topical + past-paper practice</li>
+              </ul>
+            </article>
+            <article class="prog-card prog-card--detailed reveal">
+              <div class="prog-icon" aria-hidden="true">📊</div>
+              <h3>Weekend Test Series</h3>
+              <p>Board-pattern and entry-test-pattern papers held weekly, with detailed result review for every student.</p>
+              <ul class="prog-meta">
+                <li><strong>Level:</strong> Open to all enrolled students</li>
+                <li><strong>Format:</strong> Full-length timed papers</li>
+                <li><strong>Batches:</strong> Weekends</li>
+                <li><strong>Assessment:</strong> Individual result review</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- ============ PROGRAMS: TEACHING APPROACH ============ -->
+          <div class="approach-block">
+            <p class="eyebrow reveal">Our Teaching Method</p>
+            <h2 class="reveal">The same approach, applied to every track</h2>
+
+            <div class="feature-grid feature-grid--approach">
+              <div class="feature reveal">
+                <span class="feature-mark">A</span>
+                <h3>Concept-first lectures</h3>
+                <p>New topics are taught to be understood, with worked examples before independent practice.</p>
+              </div>
+              <div class="feature reveal">
+                <span class="feature-mark">B</span>
+                <h3>Weekly concept tests</h3>
+                <p>Short, frequent tests catch gaps early — before they compound into a difficult final exam.</p>
+              </div>
+              <div class="feature reveal">
+                <span class="feature-mark">C</span>
+                <h3>Monthly parent reports</h3>
+                <p>Every parent receives a clear update on attendance and test performance, not just a year-end result.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY US ============ -->
+    <section class="page-section" id="why-us" data-section="why-us">
+      <div class="section-scroll">
+        <div class="container">
+          <p class="eyebrow reveal">Why Families Choose Us</p>
+          <h2 class="reveal">The Al-Ilm approach</h2>
+          <p class="section-lead reveal">None of this is complicated. It is a small set of habits, followed without exception, term after term.</p>
+
+          <div class="feature-grid feature-grid--eight">
+            <div class="feature reveal">
+              <span class="feature-mark">01</span>
+              <h3>Concept before content</h3>
+              <p>Every topic is taught to be understood first and memorised second — so it survives past the exam.</p>
+            </div>
+            <div class="feature reveal">
+              <span class="feature-mark">02</span>
+              <h3>Small, focused batches</h3>
+              <p>Class sizes are kept small so every student is actually seen, questioned, and corrected.</p>
+            </div>
+            <div class="feature reveal">
+              <span class="feature-mark">03</span>
+              <h3>Honest progress reports</h3>
+              <p>Parents receive clear, regular updates on test performance — no surprises at year end.</p>
+            </div>
+            <div class="feature reveal">
+              <span class="feature-mark">04</span>
+              <h3>Experienced faculty</h3>
+              <p>Subject specialists who have taught the Punjab Board and Cambridge syllabi for years, not months.</p>
+            </div>
+            <div class="feature reveal">
+              <span class="feature-mark">05</span>
+              <h3>Discipline as culture</h3>
+              <p>Punctuality, attendance, and respect are treated as part of the education, not separate from it.</p>
+            </div>
+            <div class="feature reveal">
+              <span class="feature-mark">06</span>
+              <h3>Rooted in the community</h3>
+              <p>Based in Begum Pura since 2012 — we know our students and their families, not just their roll numbers.</p>
+            </div>
+            <div class="feature reveal">
+              <span class="feature-mark">07</span>
+              <h3>Weekly testing, not just yearly</h3>
+              <p>Frequent low-stakes tests mean problems get caught in week three, not discovered in the final exam.</p>
+            </div>
+            <div class="feature reveal">
+              <span class="feature-mark">08</span>
+              <h3>One campus, full attention</h3>
+              <p>We run a single campus in Begum Pura by design — so quality does not get diluted across branches.</p>
+            </div>
+          </div>
+
+          <!-- ============ WHY US: COMPARISON ============ -->
+          <div class="compare-block">
+            <p class="eyebrow reveal">In Plain Terms</p>
+            <h2 class="reveal">Coaching-as-usual vs. the Al-Ilm way</h2>
+
+            <div class="compare-grid reveal">
+              <div class="compare-col compare-col--old">
+                <h3>Typical coaching centre</h3>
+                <ul>
+                  <li>Large, crowded batches</li>
+                  <li>One test at the end of term</li>
+                  <li>Parents find out results late</li>
+                  <li>Focus on covering the syllabus fast</li>
+                </ul>
+              </div>
+              <div class="compare-col compare-col--new">
+                <h3>Al-Ilm Science Academy</h3>
+                <ul>
+                  <li>Small, manageable batches</li>
+                  <li>Weekly concept tests, every term</li>
+                  <li>Monthly reports sent to parents</li>
+                  <li>Focus on the syllabus being understood</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADMISSIONS ============ -->
+    <section class="page-section" id="admissions" data-section="admissions">
+      <div class="section-scroll">
+        <div class="container">
+          <p class="eyebrow reveal">Admissions</p>
+          <h2 class="reveal">How to join Al-Ilm Science Academy</h2>
+          <p class="section-lead reveal">Admissions are open across the year for all programs, subject to seat availability in each batch.</p>
+
+          <ol class="timeline">
+            <li class="timeline-step reveal">
+              <span class="timeline-index">1</span>
+              <div>
+                <h3>Visit or call the campus</h3>
+                <p>Reach us in Begum Pura, Lahore, or call <a href="tel:+923000000000">+92 300 0000000</a> during office hours to discuss the right program.</p>
+              </div>
+            </li>
+            <li class="timeline-step reveal">
+              <span class="timeline-index">2</span>
+              <div>
+                <h3>Placement conversation</h3>
+                <p>A short conversation with faculty confirms the correct batch and level for the student.</p>
+              </div>
+            </li>
+            <li class="timeline-step reveal">
+              <span class="timeline-index">3</span>
+              <div>
+                <h3>Registration &amp; documents</h3>
+                <p>Complete the registration form with recent academic records and basic documents.</p>
+              </div>
+            </li>
+            <li class="timeline-step reveal">
+              <span class="timeline-index">4</span>
+              <div>
+                <h3>Begin classes</h3>
+                <p>Join the next scheduled batch and receive the term's testing and reporting calendar.</p>
+              </div>
+            </li>
+          </ol>
+
+          <!-- ============ ADMISSIONS: ELIGIBILITY & DOCUMENTS ============ -->
+          <div class="info-grid">
+            <div class="info-card reveal">
+              <h3>Eligibility</h3>
+              <ul class="check-list">
+                <li>Currently enrolled in, or promoted to, Class IX through Intermediate Part II</li>
+                <li>O or A-Level students seeking Cambridge-syllabus support</li>
+                <li>Seats confirmed on a first-come basis, subject to batch capacity</li>
+              </ul>
+            </div>
+            <div class="info-card reveal">
+              <h3>Documents Required</h3>
+              <ul class="check-list">
+                <li>Most recent school/college result or report card</li>
+                <li>Copy of student's B-Form or CNIC</li>
+                <li>One recent passport-size photograph</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="admissions-cta reveal">
+            <a href="#contact" data-nav="contact" class="btn btn-primary nav-link">Talk to Admissions</a>
+          </div>
+
+          <!-- ============ ADMISSIONS: FAQ ============ -->
+          <div class="faq-section">
+            <p class="eyebrow reveal">Admissions FAQs</p>
+            <h2 class="reveal">Questions parents usually ask</h2>
+
+            <div class="faq-list">
+              <div class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  Do you admit students mid-session?
+                  <span class="faq-toggle" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes. Admissions stay open through the year, subject to seats being available in the relevant batch.</p>
+                </div>
+              </div>
+              <div class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  Do you teach both Punjab Board and Cambridge students?
+                  <span class="faq-toggle" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes — we run separate tracks for Matric/Intermediate (Punjab Board) and O/A-Level (Cambridge) students.</p>
+                </div>
+              </div>
+              <div class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  How is student progress shared with parents?
+                  <span class="faq-toggle" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Through weekly and monthly test results, shared directly with parents rather than left for report card day.</p>
+                </div>
+              </div>
+              <div class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  What are the batch timings?
+                  <span class="faq-toggle" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Most programs run morning and evening batches, Monday through Saturday. Exact timing is confirmed for each subject during the placement conversation.</p>
+                </div>
+              </div>
+              <div class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  Can I ask about fees before enrolling?
+                  <span class="faq-toggle" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Absolutely. Call or visit the campus during office hours and our team will walk you through the fee structure for the relevant program.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="page-section" id="contact" data-section="contact">
+      <div class="section-scroll">
+        <div class="container">
+          <p class="eyebrow reveal">Contact</p>
+          <h2 class="reveal">Visit, call, or write to us</h2>
+          <p class="section-lead reveal">Have a question about a program or a seat? Send us a message and our admissions team will get back to you during office hours.</p>
+
+          <!-- ============ CONTACT FORM ============ -->
+          <!-- Front-end only: wire the onSubmit handler in script.js to your email service
+               or backend endpoint before going live. Currently shows a client-side confirmation. -->
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-name">Full name</label>
+                <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="e.g. Ahmed Raza">
+                <span class="form-error" data-error-for="cf-name"></span>
+              </div>
+              <div class="form-field">
+                <label for="cf-phone">Phone number</label>
+                <input type="tel" id="cf-phone" name="phone" required autocomplete="tel" placeholder="03XX XXXXXXX">
+                <span class="form-error" data-error-for="cf-phone"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-email">Email (optional)</label>
+                <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="you@example.com">
+                <span class="form-error" data-error-for="cf-email"></span>
+              </div>
+              <div class="form-field">
+                <label for="cf-program">Program of interest</label>
+                <select id="cf-program" name="program" required>
+                  <option value="" disabled selected>Choose a program</option>
+                  <option>Matric Science (IX–X)</option>
+                  <option>Pre-Medical (XI–XII)</option>
+                  <option>Pre-Engineering (XI–XII)</option>
+                  <option>Computer Studies</option>
+                  <option>O &amp; A-Level Science</option>
+                  <option>Not sure yet</option>
+                </select>
+                <span class="form-error" data-error-for="cf-program"></span>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="4" required placeholder="Tell us a little about the student's current class and what you're looking for."></textarea>
+              <span class="form-error" data-error-for="cf-message"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-success" id="formSuccess" role="status">Thank you — your message has been received. Our team will contact you during office hours.</p>
+          </form>
+
+          <div class="contact-grid">
+            <div class="contact-details reveal">
+              <ul class="contact-list">
+                <li>
+                  <span class="contact-label">Address</span>
+                  <span>Begum Pura, Lahore, Pakistan</span>
+                </li>
+                <li>
+                  <span class="contact-label">Phone</span>
+                  <a href="tel:+923000000000">+92 300 0000000</a>
+                </li>
+                <li>
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:info@alilmscienceacademy.com">info@alilmscienceacademy.com</a>
+                </li>
+                <li>
+                  <span class="contact-label">Office Hours</span>
+                  <span>Mon – Sat, 9:00 AM – 7:00 PM</span>
+                </li>
+              </ul>
+
+              <a class="social-btn" href="https://www.facebook.com/AlIlmnScieceAcademy" target="_blank" rel="noopener noreferrer" aria-label="Al-Ilm Science Academy on Facebook">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.87h2.78l-.44 2.9h-2.34V22c4.78-.8 8.44-4.95 8.44-9.94Z"/></svg>
+                <span>Follow us on Facebook</span>
+              </a>
+
+              <a class="map-link" href="https://maps.app.goo.gl/zMtpvdoreqigzCU6A" target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>
+            </div>
+
+            <div class="contact-map reveal">
+              <iframe
+                title="Al-Ilm Science Academy location map"
+                src="https://maps.google.com/maps?q=31.5800026,74.3606955&z=16&output=embed"
+                width="100%" height="100%" style="border:0;" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <div class="container footer-columns">
+            <div class="footer-col footer-col--brand">
+              <span class="brand-mark brand-mark--small" aria-hidden="true">
+                <svg viewBox="0 0 100 100"><use href="#icon-star"></use></svg>
+              </span>
+              <span class="footer-brand-text">Al-Ilm Science Academy</span>
+              <p>Concept-first science and mathematics coaching in Begum Pura, Lahore. Established 6 September 2012.</p>
+              <a class="social-btn social-btn--small" href="https://www.facebook.com/AlIlmnScieceAcademy" target="_blank" rel="noopener noreferrer" aria-label="Al-Ilm Science Academy on Facebook">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.87h2.78l-.44 2.9h-2.34V22c4.78-.8 8.44-4.95 8.44-9.94Z"/></svg>
+                <span>Facebook</span>
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h3>Explore</h3>
+              <ul>
+                <li><a href="#home" data-nav="home" class="nav-link">Home</a></li>
+                <li><a href="#about" data-nav="about" class="nav-link">About</a></li>
+                <li><a href="#programs" data-nav="programs" class="nav-link">Programs</a></li>
+                <li><a href="#why-us" data-nav="why-us" class="nav-link">Why Us</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h3>Admissions</h3>
+              <ul>
+                <li><a href="#admissions" data-nav="admissions" class="nav-link">How to Apply</a></li>
+                <li><a href="#contact" data-nav="contact" class="nav-link">Contact Admissions</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h3>Contact</h3>
+              <ul>
+                <li><a href="tel:+923000000000">+92 300 0000000</a></li>
+                <li><a href="mailto:info@alilmscienceacademy.com">info@alilmscienceacademy.com</a></li>
+                <li><span>Begum Pura, Lahore</span></li>
+                <li><span>Mon–Sat, 9 AM–7 PM</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container footer-bottom">
+            <span>&copy; <span id="year"></span> Al-Ilm Science Academy. All rights reserved.</span>
+          </div>
+        </footer>
+
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
