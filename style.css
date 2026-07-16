@@ -1,37 +1,15 @@
-/* =========================================================================
-   AL-ILM SCIENCE ACADEMY — STYLESHEET
-   Palette:
-     --color-primary      deep indigo   (trust / authority)
-     --color-primary-light vivid blue   (energy / links)
-     --color-gold         warm gold     (achievement, subtle Islamic-arch nod)
-     --color-teal         fresh teal    (science / growth accent)
-     --color-bg           off-white app background
-     --color-surface      card/panel white
-   Type:
-     Poppins  -> display / headings
-     Inter    -> body copy, UI text
-   ========================================================================= */
-
 :root {
-  /* Primary Blues - Trust & Authority */
-  --color-primary: #1E3A8A;       /* Deep Royal Blue (Premium & Trustworthy) */
-  --color-primary-dark: #172554;  /* Dark Navy (For hover effects & deep contrast) */
-  --color-primary-light: #3B82F6; /* Vibrant Bright Blue (For links & energy) */
+  --color-primary: #1E3A8A;
+  --color-primary-dark: #172554;
+  --color-primary-light: #3B82F6;
+  --color-gold: #F59E0B;
+  --color-teal: #10B981;
+  --color-ink: #0F172A;
+  --color-ink-soft: #475569;
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-border: #E2E8F0;
 
-  /* Accents - Achievement & Science */
-  --color-gold: #F59E0B;          /* Rich Amber/Gold (Achievement, stands out beautifully on blue) */
-  --color-teal: #10B981;          /* Fresh Emerald/Teal (Science, growth, success) */
-
-  /* Text Colors - Easy on the eyes */
-  --color-ink: #0F172A;           /* Deep Slate (Headings - Softer and more premium than pure black) */
-  --color-ink-soft: #475569;      /* Muted Slate (Paragraphs - Highly readable) */
-
-  /* Backgrounds & Surfaces */
-  --color-bg: #F8FAFC;            /* Clean Off-White (Modern app-like background) */
-  --color-surface: #FFFFFF;       /* Pure White (For cards and panels) */
-  --color-border: #E2E8F0;        /* Subtle crisp borders */
-
-  /* Fonts & UI Settings (Kept as your original) */
   --font-display: 'Poppins', 'Segoe UI', sans-serif;
   --font-body: 'Inter', 'Segoe UI', sans-serif;
 
@@ -41,11 +19,10 @@
   --radius-md: 14px;
   --radius-sm: 8px;
   
-  /* Updated Shadows to match the new ink color */
   --shadow-card: 0 10px 30px -12px rgba(15, 23, 42, 0.15);
   --shadow-soft: 0 4px 14px -6px rgba(15, 23, 42, 0.08);
 }
-/* ---------- Reset ---------- */
+
 *, *::before, *::after{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
 body{
@@ -66,7 +43,6 @@ h2{ font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight:700; margin-bottom: .75re
 h3{ font-size: 1.15rem; font-weight:600; margin-bottom:.4rem; }
 p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 
-/* Distinct, stylish hyperlinks within body copy */
 .contact-list a, .about-copy a, p a{
   color: var(--color-primary-light);
   font-weight:600;
@@ -89,7 +65,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
   margin-bottom: .9rem;
 }
 
-/* ---------- Buttons ---------- */
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
   padding: 13px 26px; border-radius: 999px;
@@ -99,7 +74,7 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 }
 .btn-primary {
   background: var(--color-primary);
-  color: #ffffff !important; /* Yeh text ko permanently white kar dega */
+  color: #ffffff !important;
   box-shadow: var(--shadow-soft);
 }
 .btn-primary a {
@@ -112,9 +87,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .btn-ghost:hover{ border-color: var(--color-primary); background:#fff; transform: translateY(-2px); }
 .btn-small{ padding: 9px 18px; font-size:.85rem; }
 
-/* =========================================================================
-   HEADER / NAVIGATION
-   ========================================================================= */
 .site-header{
   position: fixed; top:0; left:0; right:0; z-index: 1000;
   height: var(--header-h);
@@ -163,9 +135,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .mobile-nav ul{ padding: 10px 24px 18px; display:flex; flex-direction:column; gap:4px; }
 .mobile-nav .nav-link{ display:block; padding:12px 14px; }
 
-/* =========================================================================
-   APP VIEWPORT — sliding section "pages"
-   ========================================================================= */
 .app-viewport{
   position: relative;
   margin-top: var(--header-h);
@@ -201,17 +170,11 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
   scrollbar-width: thin;
 }
 
-/* =========================================================================
-   SCROLL / REVEAL ANIMATIONS
-   ========================================================================= */
 .reveal{
   transition: opacity .7s var(--ease), transform .7s var(--ease);
 }
-/* Only hide/animate reveal elements once JS confirms it is running;
-   this keeps the page fully readable if JS fails or is disabled. */
 .js-ready .reveal{ opacity:0; transform: translateY(28px); }
 .js-ready .reveal.is-revealed{ opacity:1; transform: translateY(0); }
-/* staggered children */
 .card-grid .reveal:nth-child(2){ transition-delay:.06s; }
 .card-grid .reveal:nth-child(3){ transition-delay:.12s; }
 .card-grid .reveal:nth-child(4){ transition-delay:.18s; }
@@ -223,9 +186,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .feature-grid .reveal:nth-child(5){ transition-delay:.24s; }
 .feature-grid .reveal:nth-child(6){ transition-delay:.30s; }
 
-/* =========================================================================
-   HERO
-   ========================================================================= */
 .hero{
   position:relative;
   padding: 74px 24px 60px;
@@ -259,9 +219,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 }
 .belt p{ color:#DCE2FB; margin:0; }
 
-/* =========================================================================
-   ABOUT
-   ========================================================================= */
 #about .section-scroll, #programs .section-scroll, #why-us .section-scroll,
 #admissions .section-scroll, #contact .section-scroll{ padding-top: 96px; }
 
@@ -276,9 +233,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .mini-card:nth-child(3){ border-left-color: var(--color-primary-light); }
 .mini-card p{ margin:0; font-size:.95rem; }
 
-/* =========================================================================
-   PROGRAMS
-   ========================================================================= */
 .section-lead{ max-width: 640px; font-size:1.05rem; margin-bottom: 34px; }
 .card-grid{
   display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 10px;
@@ -297,9 +251,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 }
 .prog-card p{ font-size:.94rem; margin:0; }
 
-/* =========================================================================
-   WHY US
-   ========================================================================= */
 .feature-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:26px; margin-top: 12px; }
 .feature{ padding: 8px 0 8px 0; position:relative; }
 .feature-mark{
@@ -309,9 +260,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .feature h3{ margin-bottom:8px; }
 .feature p{ font-size:.94rem; margin:0; }
 
-/* =========================================================================
-   ADMISSIONS — timeline
-   ========================================================================= */
 .timeline{ margin-top: 26px; max-width: 720px; }
 .timeline-step{
   display:flex; gap:20px; padding: 22px 0;
@@ -329,9 +277,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .timeline-step p{ margin:0; font-size:.95rem; }
 .admissions-cta{ margin-top: 30px; }
 
-/* =========================================================================
-   CONTACT
-   ========================================================================= */
 .contact-grid{ display:grid; grid-template-columns: .9fr 1.1fr; gap: 46px; margin-top: 26px; align-items:stretch; }
 .contact-list{ display:flex; flex-direction:column; gap:18px; margin-bottom: 26px; }
 .contact-list li{ display:flex; flex-direction:column; gap:2px; }
@@ -359,9 +304,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 }
 .contact-map iframe{ width:100%; height:100%; min-height:320px; }
 
-/* =========================================================================
-   FOOTER
-   ========================================================================= */
 .site-footer{ margin-top: 50px; border-top: 1px solid var(--color-border); padding: 26px 0 36px; }
 .footer-inner{
   display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
@@ -369,9 +311,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .footer-inner p{ margin:0; font-size:.85rem; }
 .footer-inner > div:first-child{ display:flex; align-items:center; font-weight:600; color: var(--color-primary); font-family: var(--font-display); font-size:.92rem; }
 
-/* =========================================================================
-   RESPONSIVE
-   ========================================================================= */
 @media (max-width: 900px){
   .main-nav{ display:none; }
   .hamburger{ display:flex; }
@@ -390,15 +329,11 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
   .hero{ padding-top: 60px; }
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   .page-section, .reveal, .btn, .prog-card, .nav-link, .mobile-nav, .social-btn{ transition: none !important; animation: none !important; }
 }
 
-/* =========================================================================
-   FACTS BAND (Home)
-   ========================================================================= */
 .facts-band{
   display:grid; grid-template-columns: repeat(4,1fr); gap: 20px;
   padding: 34px 0 8px;
@@ -413,9 +348,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 }
 .fact-label{ font-size:.82rem; color: var(--color-ink-soft); font-weight:500; }
 
-/* =========================================================================
-   HOME BLOCK WRAPPERS
-   ========================================================================= */
 .home-block{ padding: 64px 0; }
 .home-block--tint{ background: linear-gradient(180deg, #EEF1FB 0%, #F7F8FC 100%); }
 
@@ -433,9 +365,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 
 .card-grid--preview{ grid-template-columns: repeat(4, 1fr); }
 
-/* =========================================================================
-   FACILITY GRID (Home + About)
-   ========================================================================= */
 .facility-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .facility-card{
   background: var(--color-surface); border:1px solid var(--color-border);
@@ -447,9 +376,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .facility-card h3{ font-size:1rem; }
 .facility-card p{ font-size:.88rem; margin:0; }
 
-/* =========================================================================
-   TESTIMONIALS
-   ========================================================================= */
 .testimonial-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:22px; }
 .testimonial-card{
   background: var(--color-surface); border:1px solid var(--color-border);
@@ -468,9 +394,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
   color: var(--color-primary);
 }
 
-/* =========================================================================
-   FAQ ACCORDION
-   ========================================================================= */
 .faq-list{ max-width: 780px; }
 .faq-list--preview{ margin-top:4px; }
 .faq-item{
@@ -495,9 +418,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 }
 .faq-answer p{ padding: 0 4px 18px; margin:0; font-size:.94rem; }
 
-/* =========================================================================
-   CTA BANNER (Home)
-   ========================================================================= */
 .cta-banner{
   background: linear-gradient(120deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   margin-top: 10px;
@@ -512,9 +432,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .btn-ghost--dark{ color:#fff; border-color: rgba(255,255,255,.35); }
 .btn-ghost--dark:hover{ background: rgba(255,255,255,.1); border-color:#fff; }
 
-/* =========================================================================
-   ABOUT: TIMELINE / FACILITIES / ADMIN MESSAGE
-   ========================================================================= */
 .about-timeline, .about-facilities{ margin-top: 60px; }
 .timeline--history .timeline-index{
   width:auto; min-width:64px; height:64px; border-radius: 16px;
@@ -528,9 +445,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .admin-message p{ font-size:1.05rem; font-style:italic; color: var(--color-ink); margin: 0 0 12px; }
 .admin-message-by{ font-family: var(--font-display); font-weight:600; font-size:.85rem; color: var(--color-primary); }
 
-/* =========================================================================
-   PROGRAMS: DETAILED CARDS + APPROACH
-   ========================================================================= */
 .card-grid--detailed{ grid-template-columns: repeat(3, 1fr); }
 .prog-card--detailed{ display:flex; flex-direction:column; }
 .prog-meta{
@@ -543,9 +457,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .feature-grid--approach{ grid-template-columns: repeat(3,1fr); }
 .feature-grid--eight{ grid-template-columns: repeat(4,1fr); }
 
-/* =========================================================================
-   WHY US: COMPARISON BLOCK
-   ========================================================================= */
 .compare-block{ margin-top: 60px; }
 .compare-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:22px; margin-top:24px; }
 .compare-col{ border-radius: var(--radius-lg); padding: 28px 26px; }
@@ -559,9 +470,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .compare-col--new li{ color: var(--color-ink); font-weight:500; }
 .compare-col--new li::before{ content:"✓"; position:absolute; left:2px; color: var(--color-teal); font-weight:700; }
 
-/* =========================================================================
-   ADMISSIONS: ELIGIBILITY / DOCUMENTS / FAQ
-   ========================================================================= */
 .info-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:22px; margin-top: 34px; max-width: 900px; }
 .info-card{
   background: var(--color-surface); border:1px solid var(--color-border);
@@ -572,9 +480,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 .check-list li::before{ content:"✓"; position:absolute; left:0; color: var(--color-teal); font-weight:700; }
 .faq-section{ margin-top: 60px; }
 
-/* =========================================================================
-   CONTACT FORM
-   ========================================================================= */
 .contact-form{
   max-width: 780px; margin: 30px 0 56px;
   background: var(--color-surface); border:1px solid var(--color-border);
@@ -609,9 +514,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
 }
 .form-success.is-visible{ display:block; }
 
-/* =========================================================================
-   FOOTER (expanded)
-   ========================================================================= */
 .footer-columns{
   display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 30px;
   padding-top: 10px;
@@ -634,9 +536,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
   font-size:.82rem; color: var(--color-ink-soft);
 }
 
-/* =========================================================================
-   RESPONSIVE ADDITIONS FOR NEW BLOCKS
-   ========================================================================= */
 @media (max-width: 900px){
   .facts-band{ grid-template-columns: repeat(2,1fr); }
   .card-grid--preview{ grid-template-columns: repeat(2,1fr); }
@@ -662,7 +561,6 @@ p{ line-height:1.7; color: var(--color-ink-soft); margin: 0 0 1rem; }
   .block-header{ flex-direction:column; align-items:flex-start; }
 }
 
-/* Visible keyboard focus for accessibility */
 a:focus-visible, button:focus-visible{
   outline: 3px solid var(--color-gold);
   outline-offset: 2px;
